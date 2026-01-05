@@ -1,0 +1,300 @@
+2025-12-16T16:27:13.713+09:00  INFO 37616 --- [gateway] [main] com.hyungsuu.ApigatewayApplication       : Starting ApigatewayApplication using Java 21.0.9 with PID 37616 (C:\prj\workspace\apigateway\target\classes started by ix640 in C:\prj\workspace\apigateway)
+2025-12-16T16:27:13.719+09:00  INFO 37616 --- [gateway] [main] com.hyungsuu.ApigatewayApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-12-16T16:27:15.036+09:00 DEBUG 37616 --- [gateway] [main] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2025-12-16T16:27:15.037+09:00 DEBUG 37616 --- [gateway] [main] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.hyungsuu'
+2025-12-16T16:27:15.118+09:00  INFO 37616 --- [gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-12-16T16:27:15.135+09:00  INFO 37616 --- [gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2025-12-16T16:27:15.333+09:00 DEBUG 37616 --- [gateway] [main] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-12-16T16:27:15.339+09:00  WARN 37616 --- [gateway] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.hyungsuu]' package. Please check your configuration.
+2025-12-16T16:27:15.409+09:00  INFO 37616 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=149e5c36-81af-39c0-a65a-ba3dc3761b5e
+2025-12-16T16:27:15.902+09:00  WARN 37616 --- [gateway] [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customFilter': Unsatisfied dependency expressed through field 'commonDAO': Error creating bean with name 'commonDAO': Injection of resource dependencies failed
+2025-12-16T16:27:15.913+09:00  WARN 37616 --- [gateway] [main] ServerWebfluxPropertiesMigrationListener : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/'':
+	Key: spring.cloud.gateway.routes[0].id
+		Line: 20
+		Replacement: spring.cloud.gateway.server.webflux.routes[0].id
+	Key: spring.cloud.gateway.routes[0].uri
+		Line: 21
+		Replacement: spring.cloud.gateway.server.webflux.routes[0].uri
+	Key: spring.cloud.gateway.routes[0].predicates[0]
+		Line: 23
+		Replacement: spring.cloud.gateway.server.webflux.routes[0].predicates[0]
+	Key: spring.cloud.gateway.routes[1].id
+		Line: 29
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].id
+	Key: spring.cloud.gateway.routes[1].uri
+		Line: 30
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].uri
+	Key: spring.cloud.gateway.routes[1].predicates[0]
+		Line: 31
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].predicates[0]
+	Key: spring.cloud.gateway.routes[1].filters[0].name
+		Line: 35
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].filters[0].name
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2025-12-16T16:27:15.926+09:00  INFO 37616 --- [gateway] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-16T16:27:15.970+09:00 ERROR 37616 --- [gateway] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customFilter': Unsatisfied dependency expressed through field 'commonDAO': Error creating bean with name 'commonDAO': Injection of resource dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at com.hyungsuu.ApigatewayApplication.main(ApigatewayApplication.java:18) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commonDAO': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/hyungsuu/common/config/DatabaseConfig.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:605) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$LegacyResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:789) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:278) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.15.jar:6.2.15]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 61 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	at org.springframework.util.Assert.state(Assert.java:101) ~[spring-core-6.2.15.jar:6.2.15]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.findDriverClassName(DataSourceProperties.java:184) ~[spring-boot-autoconfigure-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:174) ~[spring-boot-autoconfigure-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49) ~[spring-boot-autoconfigure-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:62) ~[spring-boot-autoconfigure-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:127) ~[spring-boot-autoconfigure-3.5.9-SNAPSHOT.jar:3.5.9-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 64 common frames omitted
+
+2025-12-16T16:29:58.566+09:00  INFO 42892 --- [gateway] [main] com.hyungsuu.ApigatewayApplication       : Starting ApigatewayApplication using Java 21.0.9 with PID 42892 (C:\prj\workspace\apigateway\target\classes started by ix640 in C:\prj\workspace\apigateway)
+2025-12-16T16:29:58.569+09:00  INFO 42892 --- [gateway] [main] com.hyungsuu.ApigatewayApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-12-16T16:29:59.529+09:00 DEBUG 42892 --- [gateway] [main] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2025-12-16T16:29:59.530+09:00 DEBUG 42892 --- [gateway] [main] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.hyungsuu'
+2025-12-16T16:29:59.610+09:00  INFO 42892 --- [gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-12-16T16:29:59.635+09:00  INFO 42892 --- [gateway] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2025-12-16T16:29:59.878+09:00 DEBUG 42892 --- [gateway] [main] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-12-16T16:29:59.884+09:00  WARN 42892 --- [gateway] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.hyungsuu]' package. Please check your configuration.
+2025-12-16T16:29:59.948+09:00  INFO 42892 --- [gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=149e5c36-81af-39c0-a65a-ba3dc3761b5e
+2025-12-16T16:30:00.693+09:00 DEBUG 42892 --- [gateway] [main] o.mybatis.spring.SqlSessionFactoryBean   : Parsed configuration file: 'class path resource [ecid/mapper/config/mapper-config.xml]'
+2025-12-16T16:30:00.754+09:00 DEBUG 42892 --- [gateway] [main] o.mybatis.spring.SqlSessionFactoryBean   : Parsed mapper file: 'file [C:\prj\workspace\apigateway\target\classes\ecid\mapper\gateway\Common_SQL.xml]'
+2025-12-16T16:30:00.774+09:00  WARN 42892 --- [gateway] [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-12-16T16:30:00.952+09:00  WARN 42892 --- [gateway] [main] GatewayClassPathWarningAutoConfiguration : 
+
+**********************************************************
+
+The artifact spring-cloud-gateway-server is deprecated. It will be removed in the next major release. Please add spring-cloud-gateway-server-webflux dependency.
+
+**********************************************************
+
+
+2025-12-16T16:30:01.522+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-12-16T16:30:01.522+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-12-16T16:30:01.522+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-12-16T16:30:01.522+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-12-16T16:30:01.522+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-12-16T16:30:01.523+09:00  INFO 42892 --- [gateway] [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-12-16T16:30:01.640+09:00 DEBUG 42892 --- [gateway] [main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-12-16T16:30:01.708+09:00 DEBUG 42892 --- [gateway] [main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2025-12-16T16:30:01.752+09:00 DEBUG 42892 --- [gateway] [main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-12-16T16:30:01.756+09:00 DEBUG 42892 --- [gateway] [main] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-12-16T16:30:01.833+09:00  INFO 42892 --- [gateway] [main] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-16T16:30:01.962+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection opened. {executed in 108ms} 
+2025-12-16T16:30:01.964+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2025-12-16T16:30:01.964+09:00  INFO 42892 --- [gateway] [main] com.zaxxer.hikari.pool.PoolBase          : MyHikariCP - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+2025-12-16T16:30:01.964+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2025-12-16T16:30:01.965+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2025-12-16T16:30:01.966+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:30:01.979+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2025-12-16T16:30:01.980+09:00  INFO 42892 --- [gateway] [main] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7bdb4f17
+2025-12-16T16:30:01.981+09:00  INFO 42892 --- [gateway] [main] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-16T16:30:01.986+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@df9d400
+2025-12-16T16:30:01.995+09:00  INFO 42892 --- [gateway] [main] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2025-12-16T16:30:02.161+09:00  INFO 42892 --- [gateway] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-12-16T16:30:02.200+09:00  WARN 42892 --- [gateway] [main] s.w.s.StarterDeprecatedAutoConfiguration : 
+
+**********************************************************
+
+spring-cloud-starter-gateway is deprecated. It will be removed in the next major release. Please use spring-cloud-starter-gateway-server-webflux instead.
+
+**********************************************************
+
+
+2025-12-16T16:30:02.272+09:00  INFO 42892 --- [gateway] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-16T16:30:02.292+09:00  INFO 42892 --- [gateway] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-16T16:30:02.293+09:00  INFO 42892 --- [gateway] [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-12-16T16:30:02.295+09:00  INFO 42892 --- [gateway] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765870202294 with initial instances count: 0
+2025-12-16T16:30:02.298+09:00  INFO 42892 --- [gateway] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application GATEWAY with eureka with status UP
+2025-12-16T16:30:02.456+09:00  INFO 42892 --- [gateway] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8090 (http)
+2025-12-16T16:30:02.457+09:00  INFO 42892 --- [gateway] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2025-12-16T16:30:02.496+09:00  INFO 42892 --- [gateway] [main] com.hyungsuu.ApigatewayApplication       : Started ApigatewayApplication in 4.352 seconds (process running for 4.79)
+2025-12-16T16:30:02.499+09:00  WARN 42892 --- [gateway] [main] ServerWebfluxPropertiesMigrationListener : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/'':
+	Key: spring.cloud.gateway.routes[0].id
+		Line: 20
+		Replacement: spring.cloud.gateway.server.webflux.routes[0].id
+	Key: spring.cloud.gateway.routes[0].uri
+		Line: 21
+		Replacement: spring.cloud.gateway.server.webflux.routes[0].uri
+	Key: spring.cloud.gateway.routes[0].predicates[0]
+		Line: 23
+		Replacement: spring.cloud.gateway.server.webflux.routes[0].predicates[0]
+	Key: spring.cloud.gateway.routes[1].id
+		Line: 29
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].id
+	Key: spring.cloud.gateway.routes[1].uri
+		Line: 30
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].uri
+	Key: spring.cloud.gateway.routes[1].predicates[0]
+		Line: 31
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].predicates[0]
+	Key: spring.cloud.gateway.routes[1].filters[0].name
+		Line: 35
+		Replacement: spring.cloud.gateway.server.webflux.routes[1].filters[0].name
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2025-12-16T16:31:57.113+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:32:07.139+09:00 DEBUG 42892 --- [gateway] [reactor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [18cf2631-1] HTTP POST "/api1/templet/getJwtToken"
+2025-12-16T16:32:07.157+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] c.h.common.filter.CustomGlobalFilter     : custom global filter
+2025-12-16T16:32:07.159+09:00 DEBUG 42892 --- [gateway] [reactor-http-nio-2] org.mybatis.spring.SqlSessionUtils       : Creating a new SqlSession
+2025-12-16T16:32:07.164+09:00 DEBUG 42892 --- [gateway] [reactor-http-nio-2] org.mybatis.spring.SqlSessionUtils       : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@257bdc5c] was not registered for synchronization because synchronization is not active
+2025-12-16T16:32:07.170+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:32:07.170+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2025-12-16T16:32:07.172+09:00 DEBUG 42892 --- [gateway] [reactor-http-nio-2] o.m.s.t.SpringManagedTransaction         : JDBC Connection [HikariProxyConnection@3055574 wrapping net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7bdb4f17] will not be managed by Spring
+2025-12-16T16:32:07.179+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. PreparedStatement.new PreparedStatement returned 
+2025-12-16T16:32:07.179+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. Connection.prepareStatement(select now() from dual) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@402e1dcb
+2025-12-16T16:32:07.184+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. select now() from dual  {executed in 2 ms}
+2025-12-16T16:32:07.184+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. PreparedStatement.execute() returned true
+2025-12-16T16:32:07.187+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.new ResultSet returned 
+2025-12-16T16:32:07.187+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@61b7ddb1
+2025-12-16T16:32:07.190+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@3d1efe08
+2025-12-16T16:32:07.191+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.getType() returned 1003
+2025-12-16T16:32:07.191+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.isClosed() returned false
+2025-12-16T16:32:07.191+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.next() returned true
+2025-12-16T16:32:07.193+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.getTimestamp(now()) returned 2025-12-16 16:32:07.0
+2025-12-16T16:32:07.194+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.isClosed() returned false
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 
+|----------------------|
+|now()                 |
+|----------------------|
+|2025-12-16 16:32:07.0 |
+|----------------------|
+
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.next() returned false
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. ResultSet.close() returned void
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@4edc7caf
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. PreparedStatement.getMoreResults() returned false
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. PreparedStatement.getUpdateCount() returned -1
+2025-12-16T16:32:07.195+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. PreparedStatement.close() returned 
+2025-12-16T16:32:07.196+09:00 DEBUG 42892 --- [gateway] [reactor-http-nio-2] org.mybatis.spring.SqlSessionUtils       : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@257bdc5c]
+2025-12-16T16:32:07.196+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2025-12-16T16:32:07.196+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] c.hyungsuu.common.filter.CustomFilter    : ProcessBusiness. Start() {now()=2025-12-16 16:32:07.0}AAAAAA
+2025-12-16T16:32:07.196+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] c.hyungsuu.common.filter.CustomFilter    : == PreFilter ==
+2025-12-16T16:32:07.196+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] c.hyungsuu.common.filter.CustomFilter    : Request id = 18cf2631-1
+2025-12-16T16:32:07.196+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] c.hyungsuu.common.filter.CustomFilter    : Request Path = /api1/templet/getJwtToken
+2025-12-16T16:32:07.196+09:00  INFO 42892 --- [gateway] [reactor-http-nio-2] c.hyungsuu.common.filter.CustomFilter    : Request Header = [Accept-Encoding:"gzip,deflate", Content-Type:"application/json", Content-Length:"53", Host:"localhost:8090", Connection:"Keep-Alive", User-Agent:"Apache-HttpClient/4.5.5 (Java/16.0.2)"]
+2025-12-16T16:32:07.378+09:00 ERROR 42892 --- [gateway] [reactor-http-nio-2] c.h.c.exception.GlobalExceptionHandler   : [18cf2631-1]Connection refused: getsockopt: localhost/127.0.0.1:8020
+2025-12-16T16:32:07.422+09:00 DEBUG 42892 --- [gateway] [reactor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [18cf2631-1] Completed 200 OK
+2025-12-16T16:33:52.250+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:35:47.385+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:37:42.518+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:39:37.658+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:41:32.793+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:43:27.924+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:45:23.065+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:47:18.198+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:49:13.326+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:51:08.456+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 1. Connection.isValid(5) returned true
+2025-12-16T16:52:36.231+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-closer] log4jdbc.log4j2                          : 1. Connection.isClosed() returned false
+2025-12-16T16:52:36.242+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 9ms} 
+2025-12-16T16:52:36.242+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2025-12-16T16:52:36.278+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-adder] log4jdbc.log4j2                          : 2. Connection opened. {executed in 34ms} 
+2025-12-16T16:52:36.278+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-adder] log4jdbc.log4j2                          : 2. Connection.new Connection returned 
+2025-12-16T16:52:36.278+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-adder] log4jdbc.log4j2                          : 2. Connection.isReadOnly() returned false
+2025-12-16T16:52:36.279+09:00  INFO 42892 --- [gateway] [MyHikariCP:connection-adder] log4jdbc.log4j2                          : 2. Connection.getAutoCommit() returned true
+2025-12-16T16:54:20.570+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T16:56:04.865+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T16:57:49.170+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T16:59:33.464+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T17:01:17.768+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T17:03:02.054+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T17:04:46.343+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T17:06:30.631+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
+2025-12-16T17:08:14.921+09:00  INFO 42892 --- [gateway] [MyHikariCP:housekeeper] log4jdbc.log4j2                          : 2. Connection.isValid(5) returned true
